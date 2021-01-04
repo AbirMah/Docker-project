@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="jumbotron" style="background-color:#1daeff !important;">
+    <h2 style="color:#fff;">Music Gender Classifier</h2>      
+    <p style="color:#fff;">Using Machine Learning to Classify Music Gender</p>
+  </div>
+  <p>ML App.</p>           
+</div>
+
+<div class="card text-center">
+  <div class="card-header">
+    Results
+  </div>
+  <div class="card-body" style="background-color:#1daeff;">
+    <h5 class="card-title">Music Gender Classifier</h5>
+    <hr/>
+    <p class="card-text"><div class="alert alert-danger" role="alert">
+</div>
+{{name}}
+</p>
+
+<!-- Main ML Prediction Display Here -->
+    {% if prediction ==  0 %}
+    <p class="card-text"><div class="alert alert-danger" role="alert">
+ Blues
+</div></p>
+    <a href="#" class="btn btn-danger">Blues</a>
+     {% elif prediction == 1 %}
+	<p class="card-text"><div class="alert alert-danger" role="alert">
+  Jazz
+</div></p>
+    <a href="#" class="btn btn-primary">Jazz</a>
+    {% endif%}
+  </div>
+
+<!-- Main ML Prediction Display Ends Here -->
+  <div class="card-footer text-muted">
+   
+  </div>
+</div>
+
+
+
+
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='css/styles.css')}}">
