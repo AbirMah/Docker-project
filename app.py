@@ -29,7 +29,7 @@ def predict():
 	X = cv.fit_transform(corpus) 
 	
 	# Loading our ML Model
-	naivebayes_model = open("models/SVN.ipynb","rb")
+	naivebayes_model = open("models/SVM.ipynb","rb")
 	clf = joblib.load(naivebayes_model)
 	model=open("models/VGG.ipynb","rb")
 	clf1=joblib.load(model)
