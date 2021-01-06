@@ -35,8 +35,11 @@ def predict():
 	clf1=joblib.load(model)
 	# Receives the input query from form
 	if request.method == 'POST':
-	user = request.form['namequery']
-	return render_template('results.html',prediction = 'Type should be  {}'.namequery)
+		namequery = request.form['namequery']
+		data = [namequery]
+		vect = cv.transform(data).toarray()
+		my_prediction = clf.predict(vect)
+	return render_template('results.html',prediction = my_prediction,name = namequery.upper())
 
 
 
