@@ -1,0 +1,7 @@
+Flask==0.10.1
+librosa
+keras
+tensorflow
+numpy
+pandas
+flask_bootstrap
